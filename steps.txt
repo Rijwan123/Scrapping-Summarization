@@ -1,0 +1,86 @@
+- Create Virtual Environment: python -m venv myenv
+- Activate myenv : myenv/scripts/activate
+- pip install -r requirements.txt
+
+playwright install chromium --
+4. If we get error: playwright : The term 'playwright' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct 
+and try again.
+
+pip install playwright
+python -m playwright install chromium
+
+ 5. ### then run the code 
+final code run 
+
+ a. pip install "uvicorn[standard]"
+
+ b. uvicorn orchestrator_fastapi:app --host 0.0.0.0 --port 8000
+-----------------------------------------------------------------
+Test in Postman========>
+
+Step 2: Open Postman
+
+Open Postman.
+
+Create a new POST request.
+
+Step 3: Enter the request URL
+
+
+Local machine:
+
+http://127.0.0.1:8000/summarize
+
+
+Step 4: Set headers
+
+In Postman, go to Headers and make sure you have:
+
+Key: Content-Type
+Value: application/json
+
+Step 5: Set the request body
+
+Go to Body → raw → JSON.
+
+Enter something like this:
+
+{
+  "url": "https://docs.tricentis.com/tosca-2023.1/en-us/content/resources/webhelp/cover_web.htm"
+}
+
+
+Replace the URL with any page you want to summarize.
+
+Make sure it’s a full, valid URL starting with https://.
+
+Step 6: Send the request
+
+Click Send.
+---------------------------------------------------------------------
+In Postman
+
+{
+  "url": "https://www.bbc.com/news/world/asia/india"
+}
+
+
+-------------------------------------------------------------------
+Why http://0.0.0.0:8000 doesn’t work:
+
+1. 0.0.0.0 is a listen address (a wildcard). It tells Uvicorn: accept connections on any network interface. It is not a real routable IP you can open in your browser.
+2. Use http://127.0.0.1:8000 or http://localhost:8000 (for the same machine) — or use your machine’s actual IP (e.g. http://192.168.1.10:8000) if connecting from another device.
+---------------------------------------------------------------------
+1. 0.0.0.0 means “all interfaces” to the server process, not a destination address for clients.
+
+2. Browsers and other clients need a concrete IP or hostname to connect
+
+
+
+------------------------------------------------------------
+#info
+Synchronous code → Runs line by line. Each line must finish before the next starts.
+Example: waiting for a file download stops the whole program.
+
+Asynchronous code → Lets the program do other work while waiting for a task to finish.
+Example: start a file download, continue executing other code, and later check when the download is done.
