@@ -9,14 +9,6 @@ Follow on X Follow on LinkedIn Join our Discord
 
 Crawl4AI turns the web into clean, LLM ready Markdown for RAG, agents, and data pipelines. Fast, controllable, battle tested by a 50k+ star community.
 
-✨ Check out latest update v0.7.6
-
-✨ New in v0.7.6: Complete Webhook Infrastructure for Docker Job Queue API! Real-time notifications for both /crawl/job and /llm/job endpoints with exponential backoff retry, custom headers, and flexible delivery modes. No more polling! Release notes →
-
-✨ Recent v0.7.5: Docker Hooks System with function-based API for pipeline customization, Enhanced LLM Integration with custom providers, HTTPS Preservation, and multiple community-reported bug fixes. Release notes →
-
-✨ Previous v0.7.4: Revolutionary LLM Table Extraction with intelligent chunking, enhanced concurrency fixes, memory management refactor, and critical stability improvements. Release notes →
-
 
 Why developers pick Crawl4AI:
     LLM ready output, smart Markdown with headings, tables, code, citation hints
