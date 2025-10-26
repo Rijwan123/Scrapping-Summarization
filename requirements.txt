@@ -5,3 +5,5 @@ python-dotenv
 crawl4ai
 streamlit
 requests
+playwright==1.48.0
+beautifulsoup4

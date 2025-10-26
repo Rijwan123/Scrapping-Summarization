@@ -18,7 +18,7 @@ if st.button("Summarize"):
         with st.spinner("Fetching summary..."):
             try:
                 # Replace with your actual FastAPI endpoint
-                API_URL = "http://127.0.0.1:8000/summarize/url"
+                API_URL = "http://127.0.0.1:8000/summarize"
                 response = requests.post(API_URL, json={"url": url}, timeout=60)
 
                 if response.status_code == 200:
