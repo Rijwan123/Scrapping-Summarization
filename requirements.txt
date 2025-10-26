@@ -5,3 +5,4 @@ python-dotenv
 crawl4ai
 streamlit
 requests
+playwright
